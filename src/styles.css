@@ -1,3 +1,8 @@
+body {
+  background-color: #22bda9;
+  margin: 0px;
+}
+
 #root {
   font-family: sans-serif;
   display: flex;
@@ -12,7 +17,7 @@
   display: grid;
   justify-items: center;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px #999;
+  box-shadow: 17px 15px 20px #0a0e0ee6;
 }
 
 .add-todo {
