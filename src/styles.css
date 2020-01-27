@@ -49,3 +49,12 @@ button {
   text-decoration: line-through;
   color: black;
 }
+
+.delete-btn {
+  margin-right: 20px;
+  background-color: rgb(138, 4, 4);
+  color: white;
+  font-weight: 600;
+  font-size: 1.1em;
+  cursor: pointer;
+}

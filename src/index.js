@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import axios from 'axios';
+import axios from "axios";
 
 import TodoItem from "./todoitem";
 
@@ -24,7 +24,9 @@ class App extends React.Component {
 
   renderTodos = () => {
     return this.state.todos.map(todo => {
-      return <TodoItem  key={todo.id} todoItem={todo} deleteItem={this.deleteItem}/>;
+      return (
+        <TodoItem key={todo.id} todoItem={todo} deleteItem={this.deleteItem} />
+      );
     });
   };
 
@@ -40,33 +42,32 @@ class App extends React.Component {
     axios({
       method: "post",
       url: "https://kst-todo-list.herokuapp.com/add-todo",
-      headers: {"content-type": "application/json"},
+      headers: { "content-type": "application/json" },
       data: {
         title: this.state.todo,
         done: false
       }
     })
-    .then(data => {
-      this.setState({
-        todos: [...this.state.todos, data.data],
-        todo: ""
-      });
-    })
-    .catch(error => console.log(error))
+      .then(data => {
+        this.setState({
+          todos: [...this.state.todos, data.data],
+          todo: ""
+        });
+      })
+      .catch(error => console.log(error));
   };
 
   deleteItem = id => {
     fetch(`https://kst-todo-list.herokuapp.com/todo/${id}`, {
       method: "DELETE"
-    })
-    .then(
+    }).then(
       this.setState({
         todos: this.state.todos.filter(item => {
-          return item.id !== id
+          return item.id !== id;
         })
       })
-    )
-  }
+    );
+  };
 
   render() {
     return (
