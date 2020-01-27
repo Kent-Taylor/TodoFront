@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+import ReactTooltip from "react-tooltip";
 
 import TodoItem from "./todoitem";
 
@@ -80,7 +81,10 @@ class App extends React.Component {
             value={this.state.todo}
             onChange={this.handleChange}
           />
-          <button type="submit">Add</button>
+          <p data-tip="Add to List">
+          <button className="add-btn" type="submit">+</button>
+          </p>
+          <ReactTooltip />
         </form>
         {this.renderTodos()}
       </div>

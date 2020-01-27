@@ -28,8 +28,18 @@ body {
   padding-bottom: 15px;
 }
 
-.add-todo input,
-button {
+.add-btn {
+  background-color: rgb(0, 197, 0);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.add-todo input {
   border-radius: 10px;
   outline: none;
   border: none;
@@ -57,4 +67,6 @@ button {
   font-weight: 600;
   font-size: 1.1em;
   cursor: pointer;
+  border: none;
+  border-radius: 5px;
 }
