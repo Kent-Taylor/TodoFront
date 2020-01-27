@@ -18,6 +18,7 @@ body {
   justify-items: center;
   border-radius: 10px;
   box-shadow: 17px 15px 20px #0a0e0ee6;
+  margin: 24px;
 }
 
 .add-todo {
