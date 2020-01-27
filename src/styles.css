@@ -43,6 +43,15 @@ body {
   border-radius: 10px;
   outline: none;
   border: none;
+  text-align: center;
+  color: #00cb78;
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: black;
+}
+
+.todo-input::placeholder {
+  color: #00cb78;
 }
 
 .add-todo ::placeholder {

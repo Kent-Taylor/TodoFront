@@ -76,13 +76,16 @@ class App extends React.Component {
         <h1>ToDo List</h1>
         <form onSubmit={this.handleSubmit} className="add-todo">
           <input
+            className="todo-input"
             type="text"
-            placeholder="Add Todo"
+            placeholder="Add Todo . . ."
             value={this.state.todo}
             onChange={this.handleChange}
           />
           <p data-tip="Add to List">
-          <button className="add-btn" type="submit">+</button>
+            <button className="add-btn" type="submit">
+              +
+            </button>
           </p>
           <ReactTooltip />
         </form>
