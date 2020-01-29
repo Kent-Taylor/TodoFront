@@ -43,12 +43,13 @@ export default class TodoItem extends React.Component {
             x
           </button>
         </p>
-        < ReactTooltip/>
+        <ReactTooltip />
         <input
           onClick={this.toggleDone}
           type="checkbox"
           defaultChecked={this.state.done}
         />
+
         <p className={this.state.done ? "done" : null}>
           {this.props.todoItem.title}
         </p>
